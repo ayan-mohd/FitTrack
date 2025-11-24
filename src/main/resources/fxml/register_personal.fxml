@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" spacing="10.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fittrack.ui.RegisterPersonalController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <Label text="Welcome to FitTrack!">
+        <font>
+            <Font name="System Bold" size="24.0" />
+        </font>
+    </Label>
+    <Label text="Tell us a bit about yourself so we can build your personalized fitness journey" wrapText="true" textAlignment="CENTER">
+        <font>
+            <Font size="14.0" />
+        </font>
+    </Label>
+    <TextField fx:id="usernameField" promptText="Name" />
+    <TextField fx:id="ageField" promptText="Age" />
+    <TextField fx:id="weightField" promptText="Weight (kg)" />
+    <TextField fx:id="heightField" promptText="Height (cm)" />
+    <ComboBox fx:id="sexField" promptText="Sex" maxWidth="Infinity" />
+    <Button onAction="#handleRegister" text="Register" />
+    <Button onAction="#handleBack" text="Back" />
+</VBox>

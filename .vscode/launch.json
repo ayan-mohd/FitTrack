@@ -1,0 +1,12 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Run FitTrack",
+            "request": "launch",
+            "mainClass": "com.fittrack.app.Launcher",
+            "projectName": "fittrack"
+        }
+    ]
+}

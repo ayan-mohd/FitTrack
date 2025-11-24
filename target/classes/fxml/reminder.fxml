@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fittrack.ui.ReminderController" style="-fx-background-color: #2e3135;">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <VBox spacing="15.0" styleClass="card">
+        <Label text="Workout Reminders" style="-fx-text-fill: white;">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+
+        <HBox spacing="10.0" alignment="CENTER_LEFT">
+            <ComboBox fx:id="dayCombo" promptText="Day" prefWidth="120.0" />
+            <ComboBox fx:id="workoutTypeCombo" promptText="Workout Type" prefWidth="150.0" />
+            <TextField fx:id="customTypeField" promptText="Reminder Name" prefWidth="150.0" visible="false" managed="false"/>
+            <Button fx:id="toggleTypeButton" text="+" onAction="#handleToggleType" style="-fx-font-weight: bold;"/>
+            <TextField fx:id="timeField" promptText="HH:mm" prefWidth="100.0" />
+            <Button text="Set Reminder" onAction="#handleAddReminder" style="-fx-background-color: #4CAF50; -fx-text-fill: white;" />
+        </HBox>
+    </VBox>
+
+    <VBox spacing="10.0" VBox.vgrow="ALWAYS" styleClass="card">
+        <Label text="Your Reminders" style="-fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold;" />
+        <ListView fx:id="reminderListView" VBox.vgrow="ALWAYS" style="-fx-background-color: transparent;" />
+        <HBox alignment="CENTER_RIGHT">
+            <Button text="Delete Selected" onAction="#handleDeleteReminder" style="-fx-background-color: #F44336; -fx-text-fill: white;" />
+        </HBox>
+    </VBox>
+</VBox>

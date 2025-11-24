@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fittrack.ui.DeviceSetupController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    
+    <Label text="Connect Your Device">
+        <font>
+            <Font name="System Bold" size="24.0" />
+        </font>
+    </Label>
+    
+    <Label text="Would you like to pair a smartwatch or fitness band?" textAlignment="CENTER" wrapText="true">
+        <font>
+            <Font size="16.0" />
+        </font>
+    </Label>
+    
+    <ImageView fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url="https://cdn-icons-png.flaticon.com/512/4436/4436481.png" />
+        </image>
+    </ImageView>
+    
+    <HBox alignment="CENTER" spacing="20.0">
+        <Button onAction="#handleConnectDevice" text="Connect Device" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-weight: bold;" />
+        <Button onAction="#handleSkip" text="Connect your phone" />
+    </HBox>
+</VBox>

@@ -1,0 +1,19 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"args": [
+				"clean",
+				"package"
+			],
+			"command": "mvn",
+			"group": "build",
+			"isBackground": false,
+			"label": "Build FitTrack",
+			"problemMatcher": [
+				"$maven"
+			],
+			"type": "shell"
+		}
+	]
+}
